@@ -6,7 +6,7 @@ import moment from 'moment-timezone';
 import fetch from 'node-fetch';
 
 const args = minimist(proccess.argv.slice(2));
-console.log(args);
+
 
 if(args.h){
     console.log('Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE')
@@ -21,15 +21,13 @@ proccess.exit(0);
 }
 
 let timezone = moment.tz.guess();
-let latitude = args.n || args.s;
-let longitude = args.e || args.w;
+let latitude = args.n || args.s * -1;
+let longitude = args.e || args.w * -1;
 
-console.log(latitude)
-console.log(longitude)
+
 
 // Make a request
-const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&hourly=temperature_2m&current_weather=true&timezone=' + timezone);
-
+const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&hourly=temperature_2m,relativehumidity_2m,precipitation,surface_pressure&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&past_days=7');
 // Get the data from the request
 const data = await response.json();
 
