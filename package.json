@@ -1,14 +1,10 @@
 {
   "name": "a02-andrewknotts",
   "version": "1.0.0",
-  "description": "",
+  "description": "a02 project COMP426",
   "main": "index.js",
   "scripts": {
     "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
-  },
-
-  "bin": {
-    "galosh.js": "./cli.js"
   },
 
   "repository": {
@@ -24,6 +20,9 @@
   },
 
   "homepage": "https://github.com/comp426-2022-fall/a02-AndrewKnotts#readme",
+  "bin": {
+    "galosh.js": "./cli.js"
+  },
   "type": "module",
   "dependencies": {
     "minimalist": "^1.0.0",
