@@ -1,27 +1,23 @@
 {
-  "name": "a02-andrewknotts",
+  "name": "a02-AndrewKnotts",
   "version": "1.0.0",
   "description": "a02 project COMP426",
   "main": "index.js",
   "scripts": {
     "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/comp426-2022-fall/a02-AndrewKnotts.git"
   },
-
   "author": "Andrew Knotts",
   "license": "GPL-3.0-or-later",
-
   "bugs": {
     "url": "https://github.com/comp426-2022-fall/a02-AndrewKnotts/issues"
   },
-
   "homepage": "https://github.com/comp426-2022-fall/a02-AndrewKnotts#readme",
   "bin": {
-    "galosh.js": "./cli.js"
+    "galosh.js": "cli.js"
   },
   "type": "module",
   "dependencies": {
